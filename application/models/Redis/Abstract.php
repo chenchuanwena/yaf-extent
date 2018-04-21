@@ -100,8 +100,13 @@ class AbstractModel {
      * @param string $key
      * @param mix $value
      */
-    public function set($key, $value) {
-        return $this->getRedis()->set($this->_addPrefix($key), $value);
+    public function set($key, $value,$expire=0) {
+        $realKey=$this->_addPrefix($key);
+        $res=$this->getRedis()->Set($realKey,$value);
+        if($expire>0){
+            $this->getRedis()->expire($realKey,$expire);
+        }
+        return $res;
     }
 
     /**
@@ -179,13 +184,49 @@ class AbstractModel {
     }
 
     /**
+     * 增加集合内的元素
+     *
+     * @param string $key
+     * @param mix $value
+     * @return int
+     */
+    public function hget($h,$key){
+        $realKey=$this->_addPrefix($h);
+        $res=$this->getRedis()->hGet($realKey,$key);
+        return $res;
+    }
+
+    public function hset($h,$key,$value,$expire=0){
+        $realKey=$this->_addPrefix($h);
+        $res=$this->getRedis()->hSet($realKey,$key,$value);
+        if($expire>0){
+            $this->getRedis()->expire($realKey,$expire);
+        }
+        return $res;
+    }
+//批量设置哈希值
+    public function hmset($hkey,$arrayValues,$expire=0){
+        $realKey=$this->_addPrefix($hkey);
+        $res=$this->getRedis()->hMset($realKey,$arrayValues);
+        if($expire>0){
+            $this->getRedis()->expire($realKey,$expire);
+        }
+        return $res;
+    }
+    public function hmget($hKey,$arrayKeys){
+        $realKey=$this->_addPrefix($hKey);
+        return $this->getRedis()->hMset($realKey,$arrayKeys);
+    }
+    /**
      * 列出集合内的元素
      * 
      * @param int $key
      * @return mix
      */
     public function smembers($key) {
-        return $this->getRedis()->smembers($this->_addPrefix($key));
+        $realKey=$this->_addPrefix($key);
+        $res=$this->getRedis()->smembers($realKey);
+        return $res;
     }
 
 }

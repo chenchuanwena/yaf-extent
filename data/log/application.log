@@ -1,0 +1,749 @@
+2018-04-21 18:37:17	Array
+(
+    [status] => fail
+    [resultCode] => 100110
+    [longMessage] => 用户名不能为空
+    [shortMessage] => 用户名不能为空
+    [encryptType] => 3
+    [requestId] => 18042133MN42SPN6A3M
+    [responseTime] => 1524307037
+    [requestTime] => 1524307037
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => ======================GET===========================Array
+(
+)
+======================POST===========================Array
+(
+)
+
+)
+	uri:/Member/login/	ref:http://www.spider.com/index.php?s=/Admin/Public/login.html
+2018-04-21 18:38:00	Array
+(
+    [status] => fail
+    [resultCode] => 100110
+    [longMessage] => 用户名不能为空
+    [shortMessage] => 用户名不能为空
+    [encryptType] => 3
+    [requestId] => 18042175MCA6SM2R9PQ
+    [requestTime] => 1524307080
+    [responseTime] => 1524307080
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => ======================GET===========================Array
+(
+)
+======================POST===========================Array
+(
+)
+
+)
+	uri:/Member/login/	ref:http://www.spider.com/index.php?s=/Admin/Public/login.html
+2018-04-21 18:38:12	Array
+(
+    [status] => fail
+    [resultCode] => 100110
+    [longMessage] => 用户名不能为空
+    [shortMessage] => 用户名不能为空
+    [encryptType] => 3
+    [requestId] => 180421QB7STFDCGPCSQ
+    [requestTime] => 1524307092
+    [responseTime] => 1524307092
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => ======================GET===========================Array
+(
+)
+======================POST===========================Array
+(
+)
+
+)
+	uri:/Member/login/	ref:http://www.spider.com/index.php?s=/Admin/Public/login.html
+2018-04-21 18:39:45	Array
+(
+    [status] => fail
+    [resultCode] => 100111
+    [longMessage] => 密码不能为空
+    [shortMessage] => 密码不能为空
+    [encryptType] => 3
+    [requestId] => 180421955PKCHKMRA4G
+    [requestTime] => 1524307185
+    [responseTime] => 1524307185
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => ======================GET===========================Array
+(
+)
+======================POST===========================Array
+(
+    [mobile] => 18305954587
+)
+
+)
+	uri:/Member/login/	ref:http://www.spider.com/index.php?s=/Admin/Public/login.html
+2018-04-21 18:47:25	Array
+(
+    [status] => fail
+    [resultCode] => 100111
+    [longMessage] => 密码不能为空
+    [shortMessage] => 密码不能为空
+    [encryptType] => 3
+    [requestId] => 180421LS85XA7M39MT3
+    [requestTime] => 1524307645
+    [responseTime] => 1524307645
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => ======================GET===========================Array
+(
+)
+======================POST===========================Array
+(
+    [mobile] => 18305954587
+)
+
+)
+	uri:/Member/login/	ref:http://www.spider.com/index.php?s=/Admin/Public/login.html
+2018-04-21 18:47:39	Array
+(
+    [status] => fail
+    [resultCode] => 100201
+    [longMessage] => 请输入正确的手机号码
+    [shortMessage] => 请输入正确的手机号码
+    [encryptType] => 3
+    [requestId] => 1804218HKF7RKS7T34K
+    [requestTime] => 1524307659
+    [responseTime] => 1524307659
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => ======================GET===========================Array
+(
+)
+======================POST===========================Array
+(
+    [mobile] => 18305954587
+    [password] => 123456
+)
+
+)
+	uri:/Member/login/	ref:http://www.spider.com/index.php?s=/Admin/Public/login.html
+2018-04-21 18:48:42	Array
+(
+    [status] => fail
+    [resultCode] => 100201
+    [longMessage] => 请输入正确的手机号码
+    [shortMessage] => 请输入正确的手机号码
+    [encryptType] => 3
+    [requestId] => 180421D4CEQ6PX3MFE3
+    [requestTime] => 1524307722
+    [responseTime] => 1524307722
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => ======================GET===========================Array
+(
+)
+======================POST===========================Array
+(
+    [mobile] => 18305954587
+    [password] => 123456
+)
+
+)
+	uri:/Member/login/	ref:http://www.spider.com/index.php?s=/Admin/Public/login.html
+2018-04-21 18:49:14	Array
+(
+    [status] => fail
+    [resultCode] => 100201
+    [longMessage] => 请输入正确的手机号码
+    [shortMessage] => 请输入正确的手机号码
+    [encryptType] => 3
+    [requestId] => 180421X8ER25M98MHDC
+    [requestTime] => 1524307754
+    [responseTime] => 1524307754
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => ======================GET===========================Array
+(
+)
+======================POST===========================Array
+(
+    [mobile] => 18305954587
+    [password] => 123456
+)
+
+)
+	uri:/Member/login/	ref:http://www.spider.com/index.php?s=/Admin/Public/login.html
+2018-04-21 21:48:32	Array
+(
+    [status] => fail
+    [resultCode] => 100110
+    [longMessage] => 用户名不能为空
+    [shortMessage] => 用户名不能为空
+    [encryptType] => 3
+    [requestId] => 1804213TSRN6USTJ9F7
+    [requestTime] => 1524318512
+    [responseTime] => 1524318512
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => ======================GET===========================Array
+(
+)
+======================POST===========================Array
+(
+    [data] => Array
+        (
+            ['mobile'] => 18305954587
+            ['password'] => 123456
+        )
+
+)
+
+)
+	uri:/Member/login/	ref:http://www.spider.com/index.php?s=/Admin/Public/login.html
+2018-04-21 23:24:43	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 180421DEL7MGNRKQ9R8
+    [requestTime] => 
+    [responseTime] => 1524324283
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => ======================GET===========================Array
+(
+)
+======================POST===========================Array
+(
+    [data] => Array
+        (
+            [mobile] => 18305954587
+            [password] => 123456
+        )
+
+)
+
+)
+	uri:/Member/login/	ref:http://www.spider.com/index.php?s=/Admin/Public/login.html
+2018-04-21 23:28:19	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 180421HC8EL9CLTRH2R
+    [requestTime] => 
+    [responseTime] => 1524324499
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [mobile] => 18305954587
+                    [password] => 123456
+                )
+
+        )
+
+)
+	uri:/Member/login/	ref:http://www.spider.com/index.php?s=/Admin/Public/login.html
+2018-04-21 23:28:45	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 1804219UHB2E7XKQ6B8
+    [requestTime] => 
+    [responseTime] => 1524324525
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [mobile] => 18305954587
+                    [password] => 123456
+                )
+
+        )
+
+)
+	uri:/Member/login/	ref:http://www.spider.com/index.php?s=/Admin/Public/login.html
+2018-04-22 06:37:00	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 18042276K29CQK6D4FM
+    [requestTime] => 
+    [responseTime] => 1524350220
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [nonce] => abcdef
+                    [timestamp] => 1234567891
+                    [sign] => ec5b59d70d9c32f1ff2aee44e7f01318
+                    [deviceType] => 1
+                )
+
+        )
+
+)
+	uri:/authinfo/takeAccess/	ref:
+2018-04-22 06:41:09	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 180422XB4MREB2A3XRH
+    [requestTime] => 
+    [responseTime] => 1524350469
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [nonce] => abcdef
+                    [timestamp] => 1234567891
+                    [sign] => ec5b59d70d9c32f1ff2aee44e7f01318
+                    [driverType] => 1
+                )
+
+        )
+
+)
+	uri:/authinfo/takeAccess/	ref:
+2018-04-22 06:41:48	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 18042294CEFM8MSAGQ3
+    [requestTime] => 
+    [responseTime] => 1524350508
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [nonce] => abcdef
+                    [timestamp] => 1234567891
+                    [sign] => ec5b59d70d9c32f1ff2aee44e7f01318
+                    [driverType] => 1
+                )
+
+        )
+
+)
+	uri:/authinfo/takeAccess/	ref:
+2018-04-22 06:42:25	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 180422QEE6U96EX5BAN
+    [requestTime] => 
+    [responseTime] => 1524350545
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [nonce] => abcdef
+                    [timestamp] => 1234567891
+                    [sign] => ec5b59d70d9c32f1ff2aee44e7f01318
+                    [driverType] => 1
+                )
+
+        )
+
+)
+	uri:/authinfo/takeAccess/	ref:
+2018-04-22 06:42:45	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 180422SFCG6JLPJU6CJ
+    [requestTime] => 
+    [responseTime] => 1524350565
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [nonce] => abcdef
+                    [timestamp] => 1234567891
+                    [sign] => ec5b59d70d9c32f1ff2aee44e7f01318
+                    [driverType] => 1
+                )
+
+        )
+
+)
+	uri:/authinfo/takeAccess/	ref:
+2018-04-22 06:42:59	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 180422FR9L5928USMAS
+    [requestTime] => 
+    [responseTime] => 1524350579
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [nonce] => abcdef
+                    [timestamp] => 1234567891
+                    [sign] => ec5b59d70d9c32f1ff2aee44e7f01318
+                    [driverType] => 1
+                )
+
+        )
+
+)
+	uri:/authinfo/takeAccess/	ref:
+2018-04-22 06:43:09	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 180422BQLQGUTSDCHK3
+    [requestTime] => 
+    [responseTime] => 1524350589
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [nonce] => abcdef
+                    [timestamp] => 1234567891
+                    [sign] => ec5b59d70d9c32f1ff2aee44e7f01318
+                    [driverType] => 1
+                )
+
+        )
+
+)
+	uri:/authinfo/takeAccess/	ref:
+2018-04-22 06:45:20	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 180422DTJ8UEMAURSKK
+    [requestTime] => 
+    [responseTime] => 1524350720
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [nonce] => abcdef
+                    [timestamp] => 1234567891
+                    [sign] => ec5b59d70d9c32f1ff2aee44e7f01318
+                    [driverType] => 1
+                )
+
+        )
+
+)
+	uri:/authinfo/takeAccess/	ref:
+2018-04-22 06:46:36	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 180422XBRQTL9BQ8JXL
+    [requestTime] => 
+    [responseTime] => 1524350796
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [nonce] => abcdef
+                    [timestamp] => 1234567891
+                    [sign] => ec5b59d70d9c32f1ff2aee44e7f01318
+                    [deviceType] => 1
+                )
+
+        )
+
+)
+	uri:/authinfo/takeAccess/	ref:
+2018-04-22 06:47:03	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 180422H52SRGM47RB73
+    [requestTime] => 
+    [responseTime] => 1524350823
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [nonce] => abcdef
+                    [timestamp] => 1234567891
+                    [sign] => ec5b59d70d9c32f1ff2aee44e7f01318
+                    [deviceType] => 1
+                )
+
+        )
+
+)
+	uri:/authinfo/takeAccess/	ref:
+2018-04-22 06:47:31	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 180422FHQS55LQT6NQ3
+    [requestTime] => 
+    [responseTime] => 1524350851
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [nonce] => abcdef
+                    [timestamp] => 1234567891
+                    [deviceType] => 1
+                    [sign] => ec5b59d70d9c32f1ff2aee44e7f01318
+                )
+
+        )
+
+)
+	uri:/authinfo/takeAccess/	ref:
+2018-04-22 06:48:17	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 180422A3NJUNTQHQEQ6
+    [requestTime] => 
+    [responseTime] => 1524350897
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [nonce] => abcdef
+                    [timestamp] => 1234567891
+                    [deviceType] => 1
+                    [sign] => ec5b59d70d9c32f1ff2aee44e7f01318
+                )
+
+        )
+
+)
+	uri:/authinfo/takeAccess/	ref:
+2018-04-22 06:49:36	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 18042267KP83LQ9K9UU
+    [requestTime] => 
+    [responseTime] => 1524350976
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [nonce] => abcdef
+                    [timestamp] => 1234567891
+                    [deviceType] => 1
+                    [sign] => ec5b59d70d9c32f1ff2aee44e7f01318
+                )
+
+        )
+
+)
+	uri:/authinfo/takeAccess/	ref:
+2018-04-22 06:52:48	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 1804227QRREAC86GCRA
+    [requestTime] => 
+    [responseTime] => 1524351168
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [nonce] => abcdef
+                    [timestamp] => 1234567891
+                    [deviceType] => 1
+                    [sign] => ec5b59d70d9c32f1ff2aee44e7f01318
+                )
+
+        )
+
+)
+	uri:/authinfo/takeAccess/	ref:
+2018-04-22 06:53:00	Array
+(
+    [status] => fail
+    [resultCode] => 200004
+    [longMessage] => 签名有误
+    [shortMessage] => 签名有误
+    [encryptType] => 3
+    [requestId] => 18042292N8MABN678S9
+    [requestTime] => 
+    [responseTime] => 1524351180
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [nonce] => abcdef
+                    [timestamp] => 1234567891
+                    [deviceType] => 1
+                    [sign] => ec5b59d70d9c32f1ff2aee44e7f01318
+                )
+
+        )
+
+)
+	uri:/authinfo/takeAccess/	ref:
+2018-04-22 07:27:46	Array
+(
+    [status] => fail
+    [resultCode] => 200003
+    [longMessage] => 你已经登录
+    [shortMessage] => 你已经登录
+    [encryptType] => 3
+    [requestId] => 180422UNPFD8BGE89JD
+    [requestTime] => 1524353266
+    [responseTime] => 1524353266
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [mobile] => 18305954587
+                    [password] => 123456
+                    [key] => e90661b7593926abce316f434181847e
+                )
+
+        )
+
+)
+	uri:/Member/login/	ref:http://www.spider.com/index.php?s=/Admin/Public/login.html

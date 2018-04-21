@@ -9,6 +9,7 @@ class UserController extends \Our\Controller_AbstractApi {
      * 表单测试
      */
     public function loginAction() {
+
         //实例化表单对象，并传入需要验证的参数数组
         //其中键表示字段名
         $form = new \Forms\User\LoginModel($this->getRequest()->getParams());

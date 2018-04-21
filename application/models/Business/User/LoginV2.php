@@ -1,6 +1,7 @@
 <?php
 
 namespace Business\User;
+use DAO\MemberModel;
 use DAO\UserModel;
 
 /**
@@ -15,14 +16,17 @@ class LoginV2Model extends \Business\AbstractModel {
      * @return
      */
     public function login() {
-        $userM=UserModel::getInstance();
+        $userM=MemberModel::getInstance();
+
         //系统封装好的方法
-       // $one=$userM->find(39);
+       $one=$userM->find(1);
       //系统自带走从库方法
-        //$user= $userM->query();
+       return $one;
+        $user= $userM->query();
+
         //系统原生走主库
-        $res  =$userM->update("UPDATE t_user SET d_name='技术部' WHERE u_id=39");
-        return $res;
+        $user  =$userM->update("UPDATE Member SET member_name='abc' WHERE member_id=1");
+        return $user;
 
 
     }

@@ -29,8 +29,9 @@ class UserModel extends \DAO\AbstractModel {
     }
     //原生方法
     public function query(){
-        $mysql=\Mysql\Slave\UserModel::getInstance();
-        $res=$mysql->query("select * from t_user");
+        echo 23424;exit;
+        $mysql=\Mysql\Slave\MemberModel::getInstance();
+        $res=$mysql->query("select * from han_member");
         echo json_encode($res);
         exit;
     }

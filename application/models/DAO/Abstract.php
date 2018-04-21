@@ -10,6 +10,11 @@ namespace DAO;
  */
 abstract class AbstractModel {
 
+    public function __construct()
+    {
+        $this->init();
+    }
+
     /**
      * 捕获dao中没有的方法，直接访问mysql中相应的类的方法
      * 

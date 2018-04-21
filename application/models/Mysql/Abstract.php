@@ -163,7 +163,29 @@ abstract class AbstractModel {
 
         return $rows;
     }
+    public function selectByWhereWithColumns($where,$columns=array()){
+        $adapter = $this->_getAdapter();
+        $sql     = new \Zend\Db\Sql\Sql($adapter, $this->_tableName);
+        $select  = $this->_getDbSelect();
+        if ($columns) {
+            $select->columns($columns);
+        }
+        if ($where) {
+            $select->where($where);
+        }
+        $selectString = $sql->getSqlStringForSqlObject($select);
+        $rows         = $adapter->query($selectString, $adapter::QUERY_MODE_EXECUTE)->toArray();
+        return $rows;
+    }
+    public function findByWhere($where){
 
+        $resultSet = $this->_getDbTableGateway()->select($where);
+        $result    = $resultSet->current();
+        if ($result) {
+            return (array) $result;
+        }
+        return $result;
+    }
     /**
      * insert data
      * 

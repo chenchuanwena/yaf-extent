@@ -13,5 +13,13 @@ abstract class AbstractModel {
     public function __clone() {
         trigger_error('Clone is not allow!', E_USER_ERROR);
     }
+    public function __construct()
+    {
+        $this->init();
+    }
+
+    public function init(){
+
+    }
 
 }
