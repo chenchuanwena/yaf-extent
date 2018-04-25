@@ -20,9 +20,9 @@ abstract class Controller_AbstractApi extends \Our\Controller_Abstract {
      */
     public function init() {
         $postData=$this->getRequest()->getPost(NameConst::data);
+        $this->redis=\Redis\Db0\MemberModel::getInstance();
         if(isset($postData[NameConst::sessionKey])&&!empty($postData[NameConst::sessionKey])){
             $this->key=$postData[NameConst::sessionKey];
-            $this->redis=\Redis\Db0\MemberModel::getInstance();
             $redisKeyValue=$this->redis->tableHGet($this->key,NameConst::sessionKey);
             if(!empty($redisKeyValue)){
                 if($redisKeyValue!=$this->key){
@@ -30,8 +30,7 @@ abstract class Controller_AbstractApi extends \Our\Controller_Abstract {
                 }
             }
         }else{
-            $this->key=Common::bulidToken();
-            $this->redis->tableHSet($this->key,NameConst::sessionKey,$this->key,ApiConst::tenMin);
+            ErrorModel::throwException(CodeConfigModel::illegalAccess);
         }
         \Our\Common::$requestTime=time();
         \Yaf\Dispatcher::getInstance()->disableView();
