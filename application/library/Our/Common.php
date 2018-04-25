@@ -88,7 +88,8 @@ class Common
     }
     public static function getConfig($key){
         $config=\Yaf\Registry::get('config');
-        $config=$config->get($key);
+        $configValue=$config->get($key);
+        return $configValue;
     }
     /**
      * 获取静态资源文件
