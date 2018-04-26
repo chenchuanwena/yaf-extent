@@ -271,4 +271,11 @@ class Common
         }
         return $driverType;
     }
+
+    public static function getIdentify(){
+        return self::getClientIp().self::getDriverType();
+    }
+
+
+
 }

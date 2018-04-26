@@ -15,4 +15,18 @@ abstract class Controller_Abstract extends \Yaf\Controller_Abstract {
         Common::returnMessage($returnMessage);
 
     }
+    public function getModuleName(){
+        return \Yaf\Request_Abstract::getModuleName();
+    }
+    public function getControllerName(){
+        return \Yaf\Request_Abstract::getControllerName();
+    }
+    public  function getActionName(){
+        return \Yaf\Request_Abstract::getActionName();
+    }
+    public function getRoute(){
+        $moduleName=$this->getModuleName();
+        $actionName=$this->getControllerName();
+        
+    }
 }

@@ -747,3 +747,23 @@
 
 )
 	uri:/Member/login/	ref:http://www.spider.com/index.php?s=/Admin/Public/login.html
+2018-04-26 23:22:03	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 180426X35J7P2CLRETL
+    [requestTime] => 
+    [responseTime] => 1524756123
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+        )
+
+)
+	uri:/Authinfo/takeAccess	ref:

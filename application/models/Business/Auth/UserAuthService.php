@@ -64,7 +64,7 @@ class UserAuthServiceModel extends \Business\AbstractModel {
                     NameConst::maxAccessTime=>ApiConst::one,
                     NameConst::sessionKey=>$returnKey
                 );
-                $this->redisDb1->tableHMSet($identify,$msetArray);
+                $this->redisDb1->tableHMSet($identify,$msetArray,ApiConst::oneHour);
             }
         }
         return $returnKey;
