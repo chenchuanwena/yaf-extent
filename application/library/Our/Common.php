@@ -100,7 +100,6 @@ class Common
     {
         $files = array();
         $static = array();
-        $staticDir = Zc::C(ZcConfigConst::DirWsViewsStatic);
         if (is_array($filename)) {
             $files = $filename;
         } elseif (is_string($filename)) {
@@ -120,26 +119,26 @@ class Common
         }
 
         //静态支援url
-        $staticUrl = Zc::C('app.https.img_cdn1'); ///($request_type == 'SSL') ? HTTPS_SERVER : ( G_IS_CN_IP ? G_HTTP_HOST_TMART : G_STATIC_IMAGE_TMART_COM);
+        $staticUrl = \Bootstrap::getUrlIniConfig('resourcesHost');///($request_type == 'SSL') ? HTTPS_SERVER : ( G_IS_CN_IP ? G_HTTP_HOST_TMART : G_STATIC_IMAGE_TMART_COM);
         if (!empty ($static)) {
             $output = '';
             foreach ($static as $ext => $files) {
                 switch (strtolower($ext)) {
                     case '.css' :
                         foreach ($files as $f) {
-                            $output .= $staticUrl . '/' . $staticDir . 'css/' . $f;
+                            $output .= $staticUrl . '/' . 'css/' . $f;
                         }
                         break;
                     case '.js' :
                         foreach ($files as $f) {
-                            $output .= $staticUrl . '/' . $staticDir . 'jscript/' . $f;
+                            $output .= $staticUrl . '/' . 'jscript/' . $f;
                         }
                         break;
                     case '.jpg' :
                     case '.gif' :
                     case '.png' :
                         foreach ($files as $f) {
-                            $output = $staticUrl . '/' . $staticDir . 'images/' . $f;
+                            $output = $staticUrl . '/' . 'image/' . $f;
                         }
                         break;
                 }

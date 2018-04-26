@@ -34,6 +34,7 @@ class AuthinfoController extends \Our\Controller_Abstract
     public function takeAccessAction()
     {
 
+        echo \Our\Common::getStaticFile('logo.png');exit;
         if(!$this->req[\Our\NameConst::nonce]||!$this->req[\Our\NameConst::timestamp]||!$this->req[\Our\NameConst::deviceType]||!$this->req[\Our\NameConst::sign]){
             Error\ErrorModel::throwException(\Error\CodeConfigModel::illegalAccess);
         }
