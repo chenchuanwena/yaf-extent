@@ -209,7 +209,7 @@ class Common
             $bassStr.=$zenid;
         }
         if (empty($mobilePhone) || empty($password)) {
-            $md5Key=md5($bassStr);
+            $md5Key=md5($bassStr.time());
         }else{
             $md5Key=md5($bassStr.self::generate_password(ApiConst::randLengh).time());
         }
@@ -238,7 +238,7 @@ class Common
      * @param unknown $phone
      * @return boolean
      */
-    public function format() {
+    public static function format() {
         $args = func_get_args();
         if (count($args) == 0) {
             return;
@@ -273,7 +273,7 @@ class Common
     }
 
     public static function getIdentify(){
-        return self::getClientIp().self::getDriverType();
+        return self::getClientIp().'-'.self::getDriverType();
     }
 
 

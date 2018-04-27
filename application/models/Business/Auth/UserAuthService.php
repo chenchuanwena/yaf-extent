@@ -29,7 +29,7 @@ class UserAuthServiceModel extends \Business\AbstractModel {
     public function getAuthKey($nonce,$timestamp,$drivertype,$sign) {
         $ip=\Our\Common::getClientIp();
         $driverType=\Our\Common::getDriverType();
-        $identify=$ip.$driverType;
+        $identify=$ip.'-'.$driverType;
 
         if($drivertype!=\Our\Common::getDriverType()){
             ErrorModel::throwException(\Error\CodeConfigModel::illegalAccess);
@@ -40,7 +40,7 @@ class UserAuthServiceModel extends \Business\AbstractModel {
         }
         if($identify){
             $res=$this->redisDb1->tableHMGet($identify,array(\Our\NameConst::maxAccessTime,\Our\NameConst::sessionKey));
-            $returnKey=Common::bulidToken('','',$driverType,$driverType);
+            $returnKey=Common::bulidToken('','','',$driverType);
             if($res){
                 if($res[\Our\NameConst::maxAccessTime]>=\Our\ApiConst::maxAccess){
                     ErrorModel::throwException(\Error\CodeConfigModel::maxGetAccess);

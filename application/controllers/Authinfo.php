@@ -9,7 +9,7 @@ class AuthinfoController extends \Our\Controller_Abstract
 
     public function init()
     {
-        $this->req = $this->getRequest()->getPost(\Our\NameConst::data);
+        $this->req = $this->getRequest()->getPost();
         $this->userAuth = \Business\Auth\UserAuthServiceModel::getInstance();
 
     }
@@ -41,11 +41,11 @@ class AuthinfoController extends \Our\Controller_Abstract
 
     public function takeAccessAction()
     {
-
-        if (!$this->req[\Our\NameConst::nonce] || !$this->req[\Our\NameConst::timestamp] || !$this->req[\Our\NameConst::deviceType] || !$this->req[\Our\NameConst::sign]) {
+        $data=$this->req[\Our\NameConst::data];
+        if (!$data[\Our\NameConst::nonce] || !$data[\Our\NameConst::timestamp] || !$data[\Our\NameConst::deviceType] || !$this->req[\Our\NameConst::sign]) {
             Error\ErrorModel::throwException(\Error\CodeConfigModel::illegalAccess);
         }
-        $authKey = $this->userAuth->getAuthKey($this->req[\Our\NameConst::nonce], $this->req[\Our\NameConst::timestamp], $this->req[\Our\NameConst::deviceType], $this->req[\Our\NameConst::sign]);
+        $authKey = $this->userAuth->getAuthKey($data[\Our\NameConst::nonce], $data[\Our\NameConst::timestamp], $data[\Our\NameConst::deviceType], $this->req[\Our\NameConst::sign]);
         $this->success(array(\Our\NameConst::sessionKey => $authKey));
     }
 

@@ -1,6 +1,7 @@
 <?php
 
 namespace Business\User;
+use DAO\MbUserTokenModel;
 use DAO\MemberModel;
 use Error\CodeConfigModel;
 use Error\ErrorModel;
@@ -13,7 +14,7 @@ class MemberServiceModel extends \Business\AbstractModel {
 
     private $memberDao;
     public function init(){
-        $this->memberDao=new  MemberModel();
+        $this->memberDao=MemberModel::getInstance();
     }
     /**
      * 登录业务
@@ -70,6 +71,11 @@ class MemberServiceModel extends \Business\AbstractModel {
         }
 
         return self::$_instance;
+    }
+
+    public function addOrUpdateMbUserToken($data){
+        $mbUserToken=MbUserTokenModel::getInstance();
+        return $mbUserToken->daoBaseExcute($data);
     }
 
 }

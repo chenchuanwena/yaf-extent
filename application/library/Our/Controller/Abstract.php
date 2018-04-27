@@ -15,18 +15,33 @@ abstract class Controller_Abstract extends \Yaf\Controller_Abstract {
         Common::returnMessage($returnMessage);
 
     }
+    public function isLogin(){
+        $redisKeyValue=$this->redis->tableHGet($this->key,NameConst::memberName);
+        if($redisKeyValue){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     public function getModuleName(){
-        return \Yaf\Request_Abstract::getModuleName();
+        return $this->getRequest()->getModuleName();
     }
     public function getControllerName(){
-        return \Yaf\Request_Abstract::getControllerName();
+        return $this->getRequest()->getControllerName();
     }
     public  function getActionName(){
-        return \Yaf\Request_Abstract::getActionName();
+        return $this->getRequest()->getActionName();
     }
     public function getRoute(){
         $moduleName=$this->getModuleName();
-        $actionName=$this->getControllerName();
+        $cName=$this->getControllerName();
+        $aName=$this->getActionName();
+        if($moduleName=='Index'){
+            return $cName.'/'.$aName;
+        }else{
+            return $moduleName.'/'.$cName.'/'.$aName;
+        }
         
     }
 }
