@@ -4,7 +4,7 @@ use Business\User\LoginV2Model;
 
 class AuthinfoController extends \Our\Controller_Abstract
 {
-    private $req;
+    public $req;
     private $userAuth;
 
     public function init()
@@ -16,6 +16,13 @@ class AuthinfoController extends \Our\Controller_Abstract
 
     public function indexAction()
     {
+        session_id('b63spmehh43ao0d6kot5ulj7n7');
+        // ini_set('session.gc_maxlifetime', 5000);
+        $sesObject=\Yaf\Session::getInstance();
+        $sesObject->start();
+        exit;
+//        echo $sesObject->get('test');
+//       exit;
         $name = $this->req->getQuery('name');
         throw new Exception('hello ', 404);
     }

@@ -767,3 +767,50 @@
 
 )
 	uri:/Authinfo/takeAccess	ref:
+2018-04-29 09:47:58	Array
+(
+    [status] => fail
+    [resultCode] => 200001
+    [longMessage] => 非法访问
+    [shortMessage] => 非法访问
+    [encryptType] => 3
+    [requestId] => 1804296XFKFC8U94BD3
+    [requestTime] => 
+    [responseTime] => 1524966478
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+        )
+
+)
+	uri:/	ref:
+2018-05-02 08:01:42	Array
+(
+    [status] => fail
+    [resultCode] => 200004
+    [longMessage] => 您还没登录
+    [shortMessage] => 您还没登录
+    [encryptType] => 3
+    [requestId] => 180502FC5AUL6AHB4JN
+    [requestTime] => 
+    [responseTime] => 1525219302
+    [responseContent] => Array
+        (
+        )
+
+    [Data] => Array
+        (
+            [data] => Array
+                (
+                    [mobile] => 18305954587
+                    [password] => 123456
+                    [key] => 6a1bab0df323e2756049dcf9ab51c4c8
+                )
+
+        )
+
+)
+	uri:/Member/login/	ref:

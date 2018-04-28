@@ -21,18 +21,16 @@ abstract class Controller_AbstractApi extends \Our\Controller_Abstract {
      */
     public function init() {
         $this->req=$this->getRequest()->getPost();
-        $postData=$this->req['data'];
-        if(isset($postData[NameConst::sessionKey])&&!empty($postData[NameConst::sessionKey])){
-            $this->key=$postData[NameConst::sessionKey];
-            $this->redis=\Redis\Db0\MemberModel::getInstance();
-            $redisKeyValue=$this->redis->tableHGet($this->key,NameConst::sessionKey);
-                if($redisKeyValue!=$this->key){
-                    ErrorModel::throwException(CodeConfigModel::illegalAccess);
-                }
-        }else{
+        if(empty($this->req['data']['key'])){
             ErrorModel::throwException(CodeConfigModel::illegalAccess);
         }
-        \Our\Common::$requestTime=time();
+        session_id($this->req['data']['key']);
+        $sess=\Yaf\Session::getInstance();
+        $sess->start();
+        $member_id=$sess->get('member_id');
+        if(empty($member_id)){
+            ErrorModel::throwException(CodeConfigModel::signWrong);
+        }
         \Yaf\Dispatcher::getInstance()->disableView();
     }
     public function getAuthKey(){

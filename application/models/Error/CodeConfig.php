@@ -30,7 +30,8 @@ class CodeConfigModel {
             self::wrongTelnumber=>"请输入正确的手机号码",
             self::maxGetAccess=>'今天授权次数已经用完',
             self::isLogin=>'你已经登录',
-            self::signWrong=>'签名有误'
+            self::signWrong=>'签名有误',
+            self::signWrong=>'您还没登录'
         );
     }
 
