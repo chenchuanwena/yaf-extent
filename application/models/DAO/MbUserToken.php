@@ -1,6 +1,7 @@
 <?php
 
 namespace DAO;
+use Our\Common;
 use Our\NameConst;
 
 
@@ -48,7 +49,7 @@ class MbUserTokenModel extends \DAO\AbstractModel {
         $where[NameConst::memberMobile]=$mobile;
         $where[NameConst::memberPasswd]=$password;
         $column=array('member_id','member_name','member_truename','member_avatar','member_sex','member_birthday','member_mobile','member_mobile_bind','member_qq','member_qqopenid','member_qqinfo','member_wxinfo','member_wxopenid','member_sinaopenid','member_sinainfo','member_points','member_state','member_quicklink','member_exppoints','store_id','iswx','agree_flag','seller_id','diliveryman_id','member_tag_ids','member_group_ids','is_teacher');
-        $result=$this->memberMysql->selectByWhereWithColumns($where,$column);
+        $result=$this->mbUserTokenMysql->selectByWhereWithColumns($where,$column);
         return $result;
     }
     /**
@@ -58,11 +59,22 @@ class MbUserTokenModel extends \DAO\AbstractModel {
      */
     private static $_instance = null;
     public function tableUpdate($data,$where){
-        return $this->mbUserToken->mysqlUpdate($data,$where);
+        return $this->mbUserTokenMysql->mysqlUpdate($data,$where);
     }
 
     public function daoBaseExcute($data){
             $this->mbUserTokenMysql->mysqlExcute($data);
+    }
+
+    public function insertOrUpdate($data){
+        return $this->mbUserTokenMysql->insertOrUpdate($data);
+    }
+
+    public function findByMemberId($memberId){
+        $mbUserTokenMysql=\Mysql\Slave\MbUserTokenModel::getInstance();
+        $where['member_id']=$memberId;
+        $member=$mbUserTokenMysql->findByWhere($where);
+        return $member;
     }
     /**
      * 获取类实例

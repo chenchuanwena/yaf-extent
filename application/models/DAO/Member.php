@@ -47,7 +47,7 @@ class MemberModel extends \DAO\AbstractModel {
     public function getOneByMobileAndPassword($mobile,$password){
         $where[NameConst::memberMobile]=$mobile;
         $where[NameConst::memberPasswd]=$password;
-        $column=array('member_id','member_name','member_truename','member_avatar','member_sex','member_birthday','member_mobile','member_mobile_bind','member_qq','member_qqopenid','member_qqinfo','member_wxinfo','member_wxopenid','member_sinaopenid','member_sinainfo','member_points','member_state','member_quicklink','member_exppoints','store_id','iswx','agree_flag','seller_id','diliveryman_id','member_tag_ids','member_group_ids','is_teacher');
+        $column=array('member_id','member_name','member_truename','member_avatar','member_sex','member_birthday','member_mobile','member_mobile_bind','member_qq','member_qqopenid','member_qqinfo','member_wxinfo','member_wxopenid','member_sinaopenid','member_sinainfo','member_points','member_state','member_quicklink','member_exppoints','store_id','iswx','agree_flag','seller_id','diliveryman_id','member_tag_ids','member_group_ids','is_teacher','member_email','member_email_bind');
         $result=$this->memberMysql->selectByWhereWithColumns($where,$column);
         return $result;
     }

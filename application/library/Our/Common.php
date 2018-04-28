@@ -251,7 +251,7 @@ class Common
         return $str;
     }
 //
-    public static function getDriverType(){
+    public static function getDriverType($isstring=false){
         $agent = strtolower($_SERVER['HTTP_USER_AGENT']);
 //分析数据
         $is_pc = (strpos($agent, 'windows nt')) ? true : false;
@@ -269,8 +269,18 @@ class Common
         if($is_ipad){
              $driverType=ApiConst::ipadType;
         }
+        if($isstring){
+            switch($driverType){
+                case ApiConst::pcType:$driverType=NameConst::pc;break;
+                case ApiConst::iphoneType:$driverType=NameConst::iphone;break;
+                case ApiConst::adroidType:$driverType=NameConst::android;break;
+                case ApiConst::ipadType:$driverType=NameConst::ipad;break;
+                default:ApiConst::zero;break;
+            }
+        }
         return $driverType;
     }
+
 
     public static function getIdentify(){
         return self::getClientIp().'-'.self::getDriverType();

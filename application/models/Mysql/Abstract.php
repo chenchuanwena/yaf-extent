@@ -1,6 +1,7 @@
 <?php
 
 namespace Mysql;
+use Our\Common;
 
 /**
  * 数据读取模型抽象类
@@ -178,7 +179,6 @@ abstract class AbstractModel {
         return $rows;
     }
     public function findByWhere($where){
-
         $resultSet = $this->_getDbTableGateway()->select($where);
         $result    = $resultSet->current();
         if ($result) {

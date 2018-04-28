@@ -146,7 +146,9 @@ class AbstractModel {
     public function decrby($key, $decrement) {
         return $this->getRedis()->decrby($this->_addPrefix($key), $decrement);
     }
-
+    public function hGetAll($h){
+        return$this->getRedis()->hGetAll($this->_addPrefix($h));
+    }
     /**
      * 增加列表内的元素
      * 

@@ -62,9 +62,11 @@ class MemberModel extends \Redis\Db0\AbstractModel {
     }
 
     public function tableHMGet($h,$keyvalues){
-        return $this->tableHMGet($this->calcKey($h),$keyvalues);
+        return $this->hmget($this->calcKey($h),$keyvalues);
     }
-
+    public function tableHGAll($h){
+        return $this->hGetAll($this->calcKey($h));
+    }
 
     public function tableDel($h){
         return $this->del($this->calcKey($h));

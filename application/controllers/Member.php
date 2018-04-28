@@ -17,6 +17,7 @@ class MemberController extends \Our\Controller_AbstractApi {
         echo $login->login();
     }
     public function saveMember(){
+        $this->memberService->addOrUpdateMbUserToken($this->memberData);
         $this->redis->tableHMSet($this->key,$this->memberData,\Our\ApiConst::tenDaySecond);
     }
 
@@ -24,16 +25,30 @@ class MemberController extends \Our\Controller_AbstractApi {
     public function clearKey($key){
         $this->redis->tableDel($key);
     }
+    /**
+     * 获取会员基本信息
+     *
+     * @var member/getMemberInfo
+     */
+    public function getMemberInfoAction(){
+        $key=$this->req['data']['key'];
+        $result=$this->memberService->getMemberInfo($key);
+        $this->success($result);
+    }
     public function loginAction(){
         if($this->isLogin()){
             Error\ErrorModel::throwException(\Error\CodeConfigModel::isLogin);
         }else{
-            $data=$this->getRequest()->getPost(\Our\NameConst::data,'');
+            $data=$this->req['data'];
             $mobile=$data[\Our\NameConst::mobile];
             $password=$data[\Our\NameConst::password];
             if($this->memberService->checkUserNamePassWord($mobile,$password)){
                 $user= $this->memberService->getOneByMobileAndPassword($mobile,$password);
                 if($user){
+                    $member=$this->memberService->findMbUserTokenByMemberId($user['member_id']);
+                    if($member){
+                        $this->clearKey($member['token']);
+                    }
                     $this->clearKey($this->key);
                     $this->key=\Our\Common::bulidToken($mobile,$password);
                     $user[\Our\NameConst::sessionKey]=$this->key;
@@ -43,8 +58,8 @@ class MemberController extends \Our\Controller_AbstractApi {
                         }
                     }
                     $this->memberData=$user;
-                     register_shutdown_function(array($this,\Our\NameConst::saveMember));
-                    $this->success($this->memberData);
+                    $this->saveMember();
+                    $this->success(array(),\Our\DescribeConst::loginSuccess);
                 }else{
                     \Error\ErrorModel::throwException(\Error\CodeConfigModel::errorUsernameOrPassword);
                 }

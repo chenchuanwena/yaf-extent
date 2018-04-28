@@ -41,6 +41,12 @@ class NameConst {
     const sign='sign';
     const maxAccessTime='maxAccessTime';
 
+    //设备类型
+    const pc='pc';
+    const iphone='iphone';
+    const android='android';
+    const ipad='ipad';
+
 
 }
 

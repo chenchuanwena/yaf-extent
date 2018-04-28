@@ -1,12 +1,12 @@
 <?php
 
-namespace Mysql;
+namespace Mysql\Slave;
 use Our\Common;
 
 /**
  * 用户表连接类
  */
-class MbUserTokenModel extends \Mysql\AbstractModel {
+class MbUserTokenModel extends \Mysql\Slave\AbstractModel {
 
     /**
      * 表名

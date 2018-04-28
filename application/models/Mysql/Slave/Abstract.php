@@ -9,6 +9,12 @@ namespace Mysql\Slave;
  */
 abstract class AbstractModel {
 
+
+    /**
+     * ResultSet返回类型
+     */
+    const RESULT_SET_RETURN_TYPE_ARRAY = 'array';
+
     /**
      * 表名
      * 
@@ -88,7 +94,16 @@ abstract class AbstractModel {
 
         return $rows;
     }
-
+    /**
+     * 返回Zend的TableGateway
+     *
+     * @return \Zend\Db\TableGateway\TableGateway
+     */
+    protected function _getDbTableGateway() {
+        $resultSet    = new \Zend\Db\ResultSet\ResultSet(self::RESULT_SET_RETURN_TYPE_ARRAY);
+        $tableGateway = new \Zend\Db\TableGateway\TableGateway($this->_tableName, $this->_getAdapter(), null, $resultSet);
+        return $tableGateway;
+    }
     /**
      * 根据各个参数筛选出合适的数据
      *
@@ -108,6 +123,14 @@ abstract class AbstractModel {
         return $rows;
     }
 
+    public function findByWhere($where){
+        $resultSet = $this->_getDbTableGateway()->select($where);
+        $result    = $resultSet->current();
+        if ($result) {
+            return (array) $result;
+        }
+        return $result;
+    }
     /**
      * 禁止clone
      */
