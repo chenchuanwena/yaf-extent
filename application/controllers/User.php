@@ -35,8 +35,9 @@ class UserController extends \Our\Controller_AbstractIndex {
         }
     }
     public function saveMember(){
+        $this->memberService->addOrUpdateMbUserToken($this->memberData);
         $this->memberRedis->tableHMSet($this->key,$this->memberData,\Our\ApiConst::tenDaySecond);
-       // $this->memberService->addOrUpdateMbUserToken($this->memberData);
+        $this->memberService->addOrUpdateMbUserToken($this->memberData);
     }
 
 

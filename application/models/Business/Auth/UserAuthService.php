@@ -39,6 +39,7 @@ class UserAuthServiceModel extends \Business\AbstractModel {
             $member['key']=$returnKey;
             session_id($returnKey);
             $sess=\Yaf\Session::getInstance();
+            $sess->start();
             if($res){
                 if($res[\Our\NameConst::maxAccessTime]>=\Our\ApiConst::maxAccess){
                     ErrorModel::throwException(\Error\CodeConfigModel::maxGetAccess);
