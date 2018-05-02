@@ -15,14 +15,7 @@ abstract class Controller_Abstract extends \Yaf\Controller_Abstract {
         Common::returnMessage($returnMessage);
 
     }
-    public function isLogin(){
-        $redisKeyValue=$this->redis->tableHGet($this->key,NameConst::memberName);
-        if($redisKeyValue){
-            return true;
-        }else{
-            return false;
-        }
-    }
+
 
     public function getModuleName(){
         return $this->getRequest()->getModuleName();

@@ -10,7 +10,7 @@ class AbstractModel {
     /**
      * 表名和键的分割符号
      */
-    const DELIMITER = '-';
+    const DELIMITER = ':';
 
     /**
      * 连接的库

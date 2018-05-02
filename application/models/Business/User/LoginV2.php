@@ -16,6 +16,7 @@ class LoginV2Model extends \Business\AbstractModel {
      * @return
      */
     public function login() {
+
         $userM=MemberModel::getInstance();
 
         //系统封装好的方法
